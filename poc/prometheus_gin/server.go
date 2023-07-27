@@ -1,9 +1,10 @@
 package main
 
 import (
-	prom_gin "github.com/Mr-LvGJ/promonitor/gin"
 	"github.com/gin-gonic/gin"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
+
+	prom_gin "github.com/Mr-LvGJ/promonitor/gin"
 )
 
 func main() {
