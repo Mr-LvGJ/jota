@@ -1,4 +1,4 @@
-module github.com/Mr-LvGJ/http
+module github.com/Mr-LvGJ/jota/http
 
 go 1.20
 

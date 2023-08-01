@@ -1,4 +1,4 @@
-module github.com/Mr-LvGJ/promonitor/gin
+module github.com/Mr-LvGJ/jota/promonitor/gin
 
 go 1.20
 

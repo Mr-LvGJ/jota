@@ -1,4 +1,4 @@
-module github.com/Mr-LvGJ/tracing
+module github.com/Mr-LvGJ/jota/tracing
 
 go 1.20
 

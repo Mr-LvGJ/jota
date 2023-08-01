@@ -1,4 +1,4 @@
-module github.com/Mr-LvGJ/log
+module github.com/Mr-LvGJ/jota/log
 
 go 1.20
 
