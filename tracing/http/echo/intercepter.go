@@ -10,8 +10,9 @@ import (
 	semconv "go.opentelemetry.io/otel/semconv/v1.12.0"
 	"go.opentelemetry.io/otel/trace"
 
+	"github.com/Mr-LvGJ/jota/log"
+
 	"github.com/Mr-LvGJ/http"
-	"github.com/Mr-LvGJ/log"
 )
 
 const TraceID = "trace-id"

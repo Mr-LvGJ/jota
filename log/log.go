@@ -25,7 +25,7 @@ func SetGlobal(l *Logger) {
 	gLogger = l
 }
 
-func NewLogger(config *Config, cores ...zapcore.Core) (*Logger, error) {
+func NewLoggerWithCore(config *Config, cores ...zapcore.Core) (*Logger, error) {
 	level := zapcore.InfoLevel
 	if err := level.UnmarshalText([]byte(config.Level)); err != nil {
 		return nil, err
@@ -39,6 +39,19 @@ func NewLogger(config *Config, cores ...zapcore.Core) (*Logger, error) {
 		),
 		l: level,
 	}, nil
+}
+
+func NewLogger(c *Config) (*Logger, error) {
+	core, err := NewZapCore(c)
+	if err != nil {
+		return nil, err
+	}
+
+	logger, err := NewLoggerWithCore(c, core)
+	if err != nil {
+		return nil, err
+	}
+	return logger, nil
 }
 
 func Debug(ctx context.Context, msg string, fields ...interface{}) {

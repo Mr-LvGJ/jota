@@ -4,14 +4,15 @@ go 1.20
 
 require (
 	github.com/Mr-LvGJ/http v0.0.0
-	github.com/Mr-LvGJ/log v0.0.0
+	github.com/Mr-LvGJ/jota/access_log v0.0.0
+	github.com/Mr-LvGJ/jota/log v0.0.0
 	github.com/Mr-LvGJ/promonitor/gin v0.0.0
 	github.com/Mr-LvGJ/tracing v0.0.0
 	github.com/Mr-LvGJ/tracing/http v0.0.0
 	github.com/Mr-LvGJ/tracing/http/echo v0.0.0
 	github.com/gin-gonic/gin v1.9.1
 	github.com/globocom/echo-prometheus v0.1.2
-	github.com/labstack/echo/v4 v4.11.0
+	github.com/labstack/echo/v4 v4.11.1
 	github.com/prometheus/client_golang v1.16.0
 	go.opentelemetry.io/otel v1.16.0
 	go.opentelemetry.io/otel/trace v1.16.0
@@ -60,8 +61,8 @@ require (
 	go.opentelemetry.io/otel/metric v1.16.0 // indirect
 	go.opentelemetry.io/otel/sdk v1.16.0 // indirect
 	go.opentelemetry.io/proto/otlp v0.19.0 // indirect
-	go.uber.org/atomic v1.7.0 // indirect
-	go.uber.org/multierr v1.6.0 // indirect
+	go.uber.org/atomic v1.11.0 // indirect
+	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.24.0 // indirect
 	golang.org/x/arch v0.3.0 // indirect
 	golang.org/x/crypto v0.11.0 // indirect
@@ -78,7 +79,8 @@ require (
 
 replace (
 	github.com/Mr-LvGJ/http v0.0.0 => ../http
-	github.com/Mr-LvGJ/log v0.0.0 => ../log
+	github.com/Mr-LvGJ/jota/access_log v0.0.0 => ../access_log
+	github.com/Mr-LvGJ/jota/log v0.0.0 => ../log
 	github.com/Mr-LvGJ/promonitor/gin v0.0.0 => ../promonitor/gin
 	github.com/Mr-LvGJ/tracing v0.0.0 => ../tracing
 	github.com/Mr-LvGJ/tracing/http v0.0.0 => ../tracing/http

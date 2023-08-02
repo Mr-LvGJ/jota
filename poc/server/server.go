@@ -8,17 +8,24 @@ import (
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 
-	. "github.com/Mr-LvGJ/poc/init"
-
 	uhttp "github.com/Mr-LvGJ/http"
-	"github.com/Mr-LvGJ/log"
+	"github.com/Mr-LvGJ/jota/access_log"
+	"github.com/Mr-LvGJ/jota/log"
 	"github.com/Mr-LvGJ/tracing"
 	tracing_echo "github.com/Mr-LvGJ/tracing/http/echo"
 )
 
 func main() {
 	// 创建一个 Echo 实例
-	InitLog("server.log")
+	c := log.DefaultConfig()
+	c.Filename = "server.log"
+	if err := log.NewGlobal(c); err != nil {
+		panic(err)
+	}
+
+	accessLogConfig := *c
+	accessLogConfig.Filename = "server-access.log"
+
 	e := echo.New()
 	tp := tracing.InitTracer(
 		tracing.WithTraceExporterEndpoint("http://devbox:14268/api/traces"),
@@ -34,6 +41,7 @@ func main() {
 	e.Use(uhttp.ReplaceWriterInterceptor())
 	e.Use(middleware.RequestID())
 	e.Use(tracing_echo.TracingEchoHTTPServerInterceptor())
+	e.Use(access_log.AccessLogInterceptor(access_log.WithLogConfig(accessLogConfig)))
 	// 定义路由和处理函数
 	e.GET("/", helloHandler)
 	e.GET("/echo/:id", echoHandler)

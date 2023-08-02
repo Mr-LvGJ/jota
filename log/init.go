@@ -8,7 +8,7 @@ func NewGlobal(cc *Config) error {
 	}
 	SetGlobalCore(core)
 
-	logger, err := NewLogger(cc, core)
+	logger, err := NewLoggerWithCore(cc, core)
 	if err != nil {
 		return err
 	}

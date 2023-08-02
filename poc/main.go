@@ -8,7 +8,7 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/Mr-LvGJ/log"
+	"github.com/Mr-LvGJ/jota/log"
 
 	"github.com/Mr-LvGJ/tracing"
 )

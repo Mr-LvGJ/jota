@@ -11,6 +11,7 @@ import (
 const defaultName = "github.com/Mr-LvGJ/tracing/http"
 
 type config struct {
+	name              string
 	tracer            trace.Tracer
 	propagators       propagation.TextMapPropagator
 	spanNameFormatter func(string, *http.Request) string
@@ -25,6 +26,12 @@ type optionFunc func(*config)
 
 func (o optionFunc) apply(c *config) {
 	o(c)
+}
+
+func WithName(name string) Option {
+	return optionFunc(func(c *config) {
+		c.name = name
+	})
 }
 
 func newTracer(tp trace.TracerProvider) trace.Tracer {

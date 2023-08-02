@@ -9,7 +9,7 @@ import (
 	"go.opentelemetry.io/otel/propagation"
 	"go.opentelemetry.io/otel/trace"
 
-	"github.com/Mr-LvGJ/log"
+	"github.com/Mr-LvGJ/jota/log"
 
 	"github.com/Mr-LvGJ/http"
 )

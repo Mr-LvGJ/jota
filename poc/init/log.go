@@ -1,7 +1,7 @@
 package init
 
 import (
-	"github.com/Mr-LvGJ/log"
+	"github.com/Mr-LvGJ/jota/log"
 )
 
 func InitLog(fileName string) {

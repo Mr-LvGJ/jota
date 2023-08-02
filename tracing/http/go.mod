@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/Mr-LvGJ/http v0.0.0
-	github.com/Mr-LvGJ/log v0.0.0
+	github.com/Mr-LvGJ/jota/log v0.0.0
 	go.opentelemetry.io/otel v1.16.0
 	go.opentelemetry.io/otel/trace v1.16.0
 )
@@ -31,4 +31,4 @@ require (
 
 replace github.com/Mr-LvGJ/http v0.0.0 => ../../http
 
-replace github.com/Mr-LvGJ/log v0.0.0 => ../../log
+replace github.com/Mr-LvGJ/jota/log v0.0.0 => ../../log
