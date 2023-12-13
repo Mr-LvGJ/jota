@@ -1,21 +1,21 @@
 package log
 
 type Config struct {
-	Level      string
-	CallerSkip int
+	Level      string `default:"debug"`
+	CallerSkip int    `default:"3"`
 
 	// ZapCore config
-	Structured bool
-	CoreLevel  string
-	ErrorFile  bool
+	Structured bool   `default:"true"`
+	CoreLevel  string `default:"debug"'`
+	ErrorFile  bool   `default:"false"`
 	Prod       bool
-	
+
 	Filename   string
-	MaxSize    int
-	MaxAge     int
-	MaxBackups int
+	MaxSize    int `default:"500"`
+	MaxAge     int `default:"7"`
+	MaxBackups int `default:"5"`
 	LocalTime  bool
-	Compress   bool
+	Compress   bool `default:"true"`
 }
 
 var defaultConfig = &Config{

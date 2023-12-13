@@ -1,8 +1,6 @@
 package access_log
 
 import (
-	"fmt"
-
 	"github.com/Mr-LvGJ/jota/log"
 )
 
@@ -11,7 +9,7 @@ var accessLog = &AccessLog{}
 type option func(*AccessLog)
 
 type AccessLog struct {
-	loggerConfig log.Config
+	loggerConfig *log.Config
 	logger       *log.Logger
 }
 
@@ -31,7 +29,7 @@ var defaultLogConfig = &log.Config{
 	Compress:   true,
 }
 
-func WithLogConfig(cfg log.Config) option {
+func WithLogConfig(cfg *log.Config) option {
 	return func(c *AccessLog) {
 		c.loggerConfig = cfg
 	}
@@ -48,13 +46,12 @@ func newConfig(opts ...option) {
 		opt(accessLog)
 	}
 	if &accessLog.loggerConfig == nil {
-		accessLog.loggerConfig = *defaultLogConfig
+		accessLog.loggerConfig = defaultLogConfig
 	}
 	if accessLog.logger != nil {
-		fmt.Println("=========--------=======")
 		return
 	}
-	logger, err := log.NewLogger(&accessLog.loggerConfig)
+	logger, err := log.NewLogger(accessLog.loggerConfig)
 	if err != nil {
 		panic(err)
 	}

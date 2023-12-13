@@ -2,6 +2,16 @@ package log
 
 func NewGlobal(cc *Config) error {
 	// init global core, the global core's level must be DEBUG.
+	c := DefaultConfig()
+	if cc.Level == "" {
+		cc.Level = c.Level
+	}
+	if cc.CallerSkip == 0 {
+		cc.CallerSkip = c.CallerSkip
+	}
+	if cc.CoreLevel == "" {
+		cc.CoreLevel = c.CoreLevel
+	}
 	core, err := NewZapCore(cc)
 	if err != nil {
 		return err
