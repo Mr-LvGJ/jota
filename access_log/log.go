@@ -48,51 +48,48 @@ func (w bodyLogWriter) Write(b []byte) (int, error) {
 func GinAccessLogInterceptor(opts ...option) gin.HandlerFunc {
 	newConfig(opts...)
 	return func(c *gin.Context) {
-		requestId, _ := c.Get(XRequestIDKey)
-		start := time.Now().UTC()
-		path := c.Request.URL.Path
 		var (
 			bodyBytes []byte
 			resp      any
 		)
-
+		requestId, _ := c.Get(XRequestIDKey)
 		if c.Request.Body != nil {
 			bodyBytes, _ = io.ReadAll(c.Request.Body)
 		}
 		c.Request.Body = io.NopCloser(bytes.NewBuffer(bodyBytes))
-		method := c.Request.Method
-		ip := c.ClientIP()
 		blw := &bodyLogWriter{
 			body:           bytes.NewBufferString(""),
 			ResponseWriter: c.Writer,
 		}
 		c.Writer = blw
-		accessLog.logger.Info(c, "handle request begin",
-			"requestId", requestId,
+		attrs := []any{
+			"request_id", requestId,
 			"body", string(bodyBytes),
-			"ip", ip,
-			"path", path,
-			"method", method)
-		c.Next()
-		end := time.Now().UTC()
-		latency := end.Sub(start)
-		if err := json.Unmarshal(blw.body.Bytes(), &resp); err != nil {
-			accessLog.logger.Error(c, "handle request done",
-				"requestId", requestId,
-				"latency", latency,
-				"ip", ip,
-				"path", path,
-				"method", method,
-				"err", err)
-		} else {
-			accessLog.logger.Info(c, "handle request done",
-				"requestId", requestId,
-				"response", resp,
-				"latency", latency,
-				"ip", ip,
-				"path", path,
-				"method", method)
+			"ip", c.ClientIP(),
+			"raw_query", c.Request.URL.RawQuery,
+			"user_agent", c.Request.UserAgent(),
+			"path", c.Request.URL.Path,
+			"method", c.Request.Method,
 		}
 
+		accessLog.logger.Info(c, "handle request begin", attrs...)
+
+		start := time.Now().UTC()
+		c.Next()
+		end := time.Now().UTC()
+
+		if err := json.Unmarshal(blw.body.Bytes(), &resp); err != nil {
+			attrs = append(attrs, "err", err)
+		}
+		attrs = append(attrs,
+			"response", resp,
+			"status_code", c.Writer.Status(),
+			"cost", end.Sub(start),
+		)
+		if c.Writer.Status() >= 500 {
+			accessLog.logger.Error(c, "handle request error", attrs...)
+		} else {
+			accessLog.logger.Info(c, "handle request done", attrs...)
+		}
 	}
 }

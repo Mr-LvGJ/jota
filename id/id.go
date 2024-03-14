@@ -6,11 +6,21 @@ import (
 	"github.com/bwmarrin/snowflake"
 )
 
+var gGenerator *Generator
+
 type Generator struct {
 	*snowflake.Node
 }
 type ID struct {
 	snowflake.ID
+}
+
+func init() {
+	gGenerator, _ = NewGenerator()
+}
+
+func Next() string {
+	return gGenerator.Next().String()
 }
 
 func NewGenerator() (*Generator, error) {

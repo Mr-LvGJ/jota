@@ -1,34 +1,34 @@
 {"L":"INFO","T":"2023-07-17T23:00:54.432+0800","C":"http/interceptor.go:38","M":"xxxxxxx","trace-id":"372e3f72424397a4126cc1e2cf62d43a"}
-{"L":"INFO","T":"2023-07-17T23:00:54.432+0800","C":"client/client.go:56","M":"HTTPClientHelloInterceptor before","trace-id":"372e3f72424397a4126cc1e2cf62d43a"}
-{"L":"INFO","T":"2023-07-17T23:00:54.438+0800","C":"client/client.go:58","M":"HTTPClientHelloInterceptor after","trace-id":"372e3f72424397a4126cc1e2cf62d43a","err":null}
-{"L":"INFO","T":"2023-07-17T23:00:54.439+0800","C":"client/client.go:50","M":"response","body":"Hello, World! Request ID: fTUVOG0MkIg6U2fVX947nHQEIJiC4AYW"}
+{"L":"INFO","T":"2023-07-17T23:00:54.432+0800","C":"quotaClient/quotaClient.go:56","M":"HTTPClientHelloInterceptor before","trace-id":"372e3f72424397a4126cc1e2cf62d43a"}
+{"L":"INFO","T":"2023-07-17T23:00:54.438+0800","C":"quotaClient/quotaClient.go:58","M":"HTTPClientHelloInterceptor after","trace-id":"372e3f72424397a4126cc1e2cf62d43a","err":null}
+{"L":"INFO","T":"2023-07-17T23:00:54.439+0800","C":"quotaClient/quotaClient.go:50","M":"response","body":"Hello, World! Request ID: fTUVOG0MkIg6U2fVX947nHQEIJiC4AYW"}
 {"L":"INFO","T":"2023-07-17T23:02:47.785+0800","C":"http/interceptor.go:38","M":"xxxxxxx","trace-id":"898ebb479e931a9fbcdfa16b25b3d630"}
-{"L":"INFO","T":"2023-07-17T23:02:47.785+0800","C":"client/client.go:58","M":"HTTPClientHelloInterceptor before","trace-id":"898ebb479e931a9fbcdfa16b25b3d630"}
-{"L":"INFO","T":"2023-07-17T23:02:47.792+0800","C":"client/client.go:60","M":"HTTPClientHelloInterceptor after","trace-id":"898ebb479e931a9fbcdfa16b25b3d630","err":null}
-{"L":"INFO","T":"2023-07-17T23:02:47.792+0800","C":"client/client.go:51","M":"response","body":"Hello, World! Request ID: FVp5Lzj3cmDuYRg7N4BpRjeTRhEhXSZI"}
-{"L":"INFO","T":"2023-07-17T23:02:47.792+0800","C":"client/client.go:52","M":"response background context","body":"Hello, World! Request ID: FVp5Lzj3cmDuYRg7N4BpRjeTRhEhXSZI"}
+{"L":"INFO","T":"2023-07-17T23:02:47.785+0800","C":"quotaClient/quotaClient.go:58","M":"HTTPClientHelloInterceptor before","trace-id":"898ebb479e931a9fbcdfa16b25b3d630"}
+{"L":"INFO","T":"2023-07-17T23:02:47.792+0800","C":"quotaClient/quotaClient.go:60","M":"HTTPClientHelloInterceptor after","trace-id":"898ebb479e931a9fbcdfa16b25b3d630","err":null}
+{"L":"INFO","T":"2023-07-17T23:02:47.792+0800","C":"quotaClient/quotaClient.go:51","M":"response","body":"Hello, World! Request ID: FVp5Lzj3cmDuYRg7N4BpRjeTRhEhXSZI"}
+{"L":"INFO","T":"2023-07-17T23:02:47.792+0800","C":"quotaClient/quotaClient.go:52","M":"response background context","body":"Hello, World! Request ID: FVp5Lzj3cmDuYRg7N4BpRjeTRhEhXSZI"}
 {"L":"INFO","T":"2023-07-17T23:08:15.551+0800","C":"http/interceptor.go:38","M":"xxxxxxx"}
-{"L":"INFO","T":"2023-07-17T23:08:15.552+0800","C":"client/client.go:58","M":"HTTPClientHelloInterceptor before","trace-id":"18a337a8fe4a669c6ae01d88b0f27b7a"}
-{"L":"INFO","T":"2023-07-17T23:08:15.558+0800","C":"client/client.go:60","M":"HTTPClientHelloInterceptor after","trace-id":"18a337a8fe4a669c6ae01d88b0f27b7a","err":null}
-{"L":"INFO","T":"2023-07-17T23:08:15.559+0800","C":"client/client.go:51","M":"response","body":"Hello, World! Request ID: ofDvhnDEwnmcWqBHfRce4iaaj1JPgcv1"}
-{"L":"INFO","T":"2023-07-17T23:08:15.559+0800","C":"client/client.go:52","M":"response background context","trace-id":"18a337a8fe4a669c6ae01d88b0f27b7a","body":"Hello, World! Request ID: ofDvhnDEwnmcWqBHfRce4iaaj1JPgcv1"}
+{"L":"INFO","T":"2023-07-17T23:08:15.552+0800","C":"quotaClient/quotaClient.go:58","M":"HTTPClientHelloInterceptor before","trace-id":"18a337a8fe4a669c6ae01d88b0f27b7a"}
+{"L":"INFO","T":"2023-07-17T23:08:15.558+0800","C":"quotaClient/quotaClient.go:60","M":"HTTPClientHelloInterceptor after","trace-id":"18a337a8fe4a669c6ae01d88b0f27b7a","err":null}
+{"L":"INFO","T":"2023-07-17T23:08:15.559+0800","C":"quotaClient/quotaClient.go:51","M":"response","body":"Hello, World! Request ID: ofDvhnDEwnmcWqBHfRce4iaaj1JPgcv1"}
+{"L":"INFO","T":"2023-07-17T23:08:15.559+0800","C":"quotaClient/quotaClient.go:52","M":"response background context","trace-id":"18a337a8fe4a669c6ae01d88b0f27b7a","body":"Hello, World! Request ID: ofDvhnDEwnmcWqBHfRce4iaaj1JPgcv1"}
 {"L":"INFO","T":"2023-07-17T23:20:50.270+0800","C":"http/interceptor.go:38","M":"xxxxxxx","test-log":"1999999999999"}
-{"L":"INFO","T":"2023-07-17T23:20:50.270+0800","C":"client/client.go:59","M":"HTTPClientHelloInterceptor before","test-log":"1999999999999","trace-id":"affdf31ccbdb350f1024d5fa94887b71"}
-{"L":"INFO","T":"2023-07-17T23:20:50.276+0800","C":"client/client.go:61","M":"HTTPClientHelloInterceptor after","test-log":"1999999999999","trace-id":"affdf31ccbdb350f1024d5fa94887b71","err":null}
-{"L":"INFO","T":"2023-07-17T23:20:50.277+0800","C":"client/client.go:52","M":"response","test-log":"1999999999999","body":"Hello, World! Request ID: j5Z5JuLMoDdWJAgy9Qmu5zz3ZVaCRIGN"}
-{"L":"INFO","T":"2023-07-17T23:20:50.277+0800","C":"client/client.go:53","M":"response background context","test-log":"1999999999999","trace-id":"affdf31ccbdb350f1024d5fa94887b71","body":"Hello, World! Request ID: j5Z5JuLMoDdWJAgy9Qmu5zz3ZVaCRIGN"}
+{"L":"INFO","T":"2023-07-17T23:20:50.270+0800","C":"quotaClient/quotaClient.go:59","M":"HTTPClientHelloInterceptor before","test-log":"1999999999999","trace-id":"affdf31ccbdb350f1024d5fa94887b71"}
+{"L":"INFO","T":"2023-07-17T23:20:50.276+0800","C":"quotaClient/quotaClient.go:61","M":"HTTPClientHelloInterceptor after","test-log":"1999999999999","trace-id":"affdf31ccbdb350f1024d5fa94887b71","err":null}
+{"L":"INFO","T":"2023-07-17T23:20:50.277+0800","C":"quotaClient/quotaClient.go:52","M":"response","test-log":"1999999999999","body":"Hello, World! Request ID: j5Z5JuLMoDdWJAgy9Qmu5zz3ZVaCRIGN"}
+{"L":"INFO","T":"2023-07-17T23:20:50.277+0800","C":"quotaClient/quotaClient.go:53","M":"response background context","test-log":"1999999999999","trace-id":"affdf31ccbdb350f1024d5fa94887b71","body":"Hello, World! Request ID: j5Z5JuLMoDdWJAgy9Qmu5zz3ZVaCRIGN"}
 {"L":"INFO","T":"2023-07-17T23:21:55.652+0800","C":"http/interceptor.go:37","M":"xxxxxxx","test-log":"1999999999999"}
-{"L":"INFO","T":"2023-07-17T23:21:55.652+0800","C":"client/client.go:59","M":"HTTPClientHelloInterceptor before","test-log":"1999999999999","trace-id":"95aac13934d3e7a31468b74c5c882d44"}
-{"L":"INFO","T":"2023-07-17T23:21:55.658+0800","C":"client/client.go:61","M":"HTTPClientHelloInterceptor after","test-log":"1999999999999","trace-id":"95aac13934d3e7a31468b74c5c882d44","err":null}
-{"L":"INFO","T":"2023-07-17T23:21:55.658+0800","C":"client/client.go:52","M":"response","test-log":"1999999999999","body":"Hello, World! Request ID: S2bCn6qzUuZzyG7i0Iabqn0sINY68TYq"}
-{"L":"INFO","T":"2023-07-17T23:21:55.658+0800","C":"client/client.go:53","M":"response background context","test-log":"1999999999999","trace-id":"95aac13934d3e7a31468b74c5c882d44","body":"Hello, World! Request ID: S2bCn6qzUuZzyG7i0Iabqn0sINY68TYq"}
+{"L":"INFO","T":"2023-07-17T23:21:55.652+0800","C":"quotaClient/quotaClient.go:59","M":"HTTPClientHelloInterceptor before","test-log":"1999999999999","trace-id":"95aac13934d3e7a31468b74c5c882d44"}
+{"L":"INFO","T":"2023-07-17T23:21:55.658+0800","C":"quotaClient/quotaClient.go:61","M":"HTTPClientHelloInterceptor after","test-log":"1999999999999","trace-id":"95aac13934d3e7a31468b74c5c882d44","err":null}
+{"L":"INFO","T":"2023-07-17T23:21:55.658+0800","C":"quotaClient/quotaClient.go:52","M":"response","test-log":"1999999999999","body":"Hello, World! Request ID: S2bCn6qzUuZzyG7i0Iabqn0sINY68TYq"}
+{"L":"INFO","T":"2023-07-17T23:21:55.658+0800","C":"quotaClient/quotaClient.go:53","M":"response background context","test-log":"1999999999999","trace-id":"95aac13934d3e7a31468b74c5c882d44","body":"Hello, World! Request ID: S2bCn6qzUuZzyG7i0Iabqn0sINY68TYq"}
 {"L":"INFO","T":"2023-07-17T23:25:26.095+0800","C":"http/interceptor.go:37","M":"xxxxxxx"}
-{"L":"INFO","T":"2023-07-17T23:25:26.096+0800","C":"client/client.go:60","M":"HTTPClientHelloInterceptor before","trace-id":"5e9917510f606ca0f35226250b9906bd"}
-{"L":"INFO","T":"2023-07-17T23:25:26.102+0800","C":"client/client.go:62","M":"HTTPClientHelloInterceptor after","trace-id":"5e9917510f606ca0f35226250b9906bd","err":null}
-{"L":"INFO","T":"2023-07-17T23:25:26.102+0800","C":"client/client.go:53","M":"response","body":"Hello, World! Request ID: ecm7neFXR5myHvsFSeQyoqhbcThCLoSu"}
-{"L":"INFO","T":"2023-07-17T23:25:26.102+0800","C":"client/client.go:54","M":"response background context","trace-id":"5e9917510f606ca0f35226250b9906bd","body":"Hello, World! Request ID: ecm7neFXR5myHvsFSeQyoqhbcThCLoSu"}
+{"L":"INFO","T":"2023-07-17T23:25:26.096+0800","C":"quotaClient/quotaClient.go:60","M":"HTTPClientHelloInterceptor before","trace-id":"5e9917510f606ca0f35226250b9906bd"}
+{"L":"INFO","T":"2023-07-17T23:25:26.102+0800","C":"quotaClient/quotaClient.go:62","M":"HTTPClientHelloInterceptor after","trace-id":"5e9917510f606ca0f35226250b9906bd","err":null}
+{"L":"INFO","T":"2023-07-17T23:25:26.102+0800","C":"quotaClient/quotaClient.go:53","M":"response","body":"Hello, World! Request ID: ecm7neFXR5myHvsFSeQyoqhbcThCLoSu"}
+{"L":"INFO","T":"2023-07-17T23:25:26.102+0800","C":"quotaClient/quotaClient.go:54","M":"response background context","trace-id":"5e9917510f606ca0f35226250b9906bd","body":"Hello, World! Request ID: ecm7neFXR5myHvsFSeQyoqhbcThCLoSu"}
 {"L":"INFO","T":"2023-07-17T23:26:51.348+0800","C":"http/interceptor.go:38","M":"xxxxxxx","trace-id":"298718b446d6cdaa6582ee29e0374c99"}
-{"L":"INFO","T":"2023-07-17T23:26:51.349+0800","C":"client/client.go:60","M":"HTTPClientHelloInterceptor before","trace-id":"298718b446d6cdaa6582ee29e0374c99"}
-{"L":"INFO","T":"2023-07-17T23:26:51.355+0800","C":"client/client.go:62","M":"HTTPClientHelloInterceptor after","trace-id":"298718b446d6cdaa6582ee29e0374c99","err":null}
-{"L":"INFO","T":"2023-07-17T23:26:51.355+0800","C":"client/client.go:53","M":"response","body":"Hello, World! Request ID: gMyinvIr56JzeKuMLfmHJQhYxh60QOzp"}
-{"L":"INFO","T":"2023-07-17T23:26:51.355+0800","C":"client/client.go:54","M":"response background context","trace-id":"298718b446d6cdaa6582ee29e0374c99","body":"Hello, World! Request ID: gMyinvIr56JzeKuMLfmHJQhYxh60QOzp"}
+{"L":"INFO","T":"2023-07-17T23:26:51.349+0800","C":"quotaClient/quotaClient.go:60","M":"HTTPClientHelloInterceptor before","trace-id":"298718b446d6cdaa6582ee29e0374c99"}
+{"L":"INFO","T":"2023-07-17T23:26:51.355+0800","C":"quotaClient/quotaClient.go:62","M":"HTTPClientHelloInterceptor after","trace-id":"298718b446d6cdaa6582ee29e0374c99","err":null}
+{"L":"INFO","T":"2023-07-17T23:26:51.355+0800","C":"quotaClient/quotaClient.go:53","M":"response","body":"Hello, World! Request ID: gMyinvIr56JzeKuMLfmHJQhYxh60QOzp"}
+{"L":"INFO","T":"2023-07-17T23:26:51.355+0800","C":"quotaClient/quotaClient.go:54","M":"response background context","trace-id":"298718b446d6cdaa6582ee29e0374c99","body":"Hello, World! Request ID: gMyinvIr56JzeKuMLfmHJQhYxh60QOzp"}

@@ -1,5 +1,11 @@
 package log
 
+func init() {
+	if err := NewGlobal(&Config{Level: "info", CallerSkip: 3}); err != nil {
+		panic(err)
+	}
+}
+
 func NewGlobal(cc *Config) error {
 	// init global core, the global core's level must be DEBUG.
 	c := DefaultConfig()

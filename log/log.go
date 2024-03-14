@@ -2,6 +2,7 @@ package log
 
 import (
 	"context"
+	"net/http"
 	"strings"
 
 	"go.uber.org/zap"
@@ -120,6 +121,9 @@ func (l *Logger) Log(ctx context.Context, level zapcore.Level, msg string, kvs .
 		return
 	}
 
+	if r, ok := ctx.Value(contextLogKey).(*http.Request); ok {
+		ctx = r.Context()
+	}
 	ctxFields, _ := ctx.Value(contextLogKey).([]zap.Field)
 	fields := append(ctxFields, zapFields(kvs)...)
 
