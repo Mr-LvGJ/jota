@@ -1,5 +1,5 @@
-github.com/Mr-LvGJ/gobase v1.0.0 h1:uCYR6YOa2SFXG9K7eBvxcglJ8zcy8LZWFr6G76nRle8=
-github.com/Mr-LvGJ/gobase v1.0.0/go.mod h1:cWs79L5ycU9of8ZvJkgi2MRMeApZg702QDVpXmw27Rc=
+github.com/Mr-LvGJ/jota/log v0.0.0-20240330170526-fe61fe891fd0 h1:8dPp+Z8jE3ygsE0LcWY2bIW2IYN5GefELoGU7MciZaA=
+github.com/Mr-LvGJ/jota/log v0.0.0-20240330170526-fe61fe891fd0/go.mod h1:F8Nn3NxgpIE5u60weHLMB9dsDi+c4pPP2lA8GaCkPJw=
 github.com/benbjohnson/clock v1.1.0 h1:Q92kusRqC1XV2MjkWETPvjJVqKetz1OzxZB7mHJLju8=
 github.com/bytedance/sonic v1.5.0/go.mod h1:ED5hyg4y6t3/9Ku1R6dU/4KyJ48DZ4jPhfY1O2AihPM=
 github.com/bytedance/sonic v1.9.1 h1:6iJ6NqdoxCDr6mbY8h18oSO+cShGSMRGCEo7F2h0x8s=
@@ -29,8 +29,6 @@ github.com/golang/protobuf v1.5.0/go.mod h1:FsONVRAS9T7sI+LIUmWTfcYkHO4aIWwzhcaS
 github.com/google/go-cmp v0.5.5 h1:Khx7svrCpmxxtHBq5j2mp/xVjsi8hQMfNLvJFAlrGgU=
 github.com/google/go-cmp v0.5.5/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
-github.com/google/uuid v1.5.0 h1:1p67kYwdtXjb0gL0BPiP1Av9wiZPo5A8z2cWkTZ+eyU=
-github.com/google/uuid v1.5.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
 github.com/json-iterator/go v1.1.12 h1:PV8peI4a0ysnczrg+LtxykD8LfKY9ML6u2jnxaEnrnM=
 github.com/json-iterator/go v1.1.12/go.mod h1:e30LSqwooZae/UwlEbR2852Gd8hjQvJoHmT4TnhNGBo=
 github.com/klauspost/cpuid/v2 v2.0.9/go.mod h1:FInQzS24/EEf25PyTYn52gqo7WaD8xa0213Md/qVLRg=

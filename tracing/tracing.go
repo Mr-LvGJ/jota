@@ -35,7 +35,7 @@ var conf = &Config{
 
 type Config struct {
 	ServiceName                   string
-	ServiceVersion                string // using xversion
+	ServiceVersion                string
 	ServiceCommitId               string
 	ServiceBuildTime              string
 	TraceExporterEndpoint         string

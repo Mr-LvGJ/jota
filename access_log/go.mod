@@ -3,10 +3,8 @@ module github.com/Mr-LvGJ/jota/access_log
 go 1.20
 
 require (
-	github.com/Mr-LvGJ/gobase v1.0.0
-	github.com/Mr-LvGJ/jota/log v0.0.0
+	github.com/Mr-LvGJ/jota/log v0.0.0-20240330170526-fe61fe891fd0
 	github.com/gin-gonic/gin v1.9.1
-	github.com/google/uuid v1.5.0
 	github.com/labstack/echo/v4 v4.11.1
 )
 
@@ -44,5 +42,3 @@ require (
 	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
-
-replace github.com/Mr-LvGJ/jota/log v0.0.0 => ../log
