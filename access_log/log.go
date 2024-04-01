@@ -12,8 +12,8 @@ import (
 
 const XRequestIDKey = "X-Request-ID"
 
-func AccessLogInterceptor(opts ...option) echo.MiddlewareFunc {
-	newConfig(opts...)
+func AccessLogInterceptor(opts ...Option) echo.MiddlewareFunc {
+	NewConfig(opts...)
 	return func(next echo.HandlerFunc) echo.HandlerFunc {
 		return func(c echo.Context) error {
 			startTime := time.Now()
@@ -22,9 +22,9 @@ func AccessLogInterceptor(opts ...option) echo.MiddlewareFunc {
 			err := next(c)
 
 			if err != nil {
-				accessLog.logger.Error(ctx, "Handle request done", "err", err)
+				accessLog.Error(ctx, "Handle request done", "err", err)
 			} else {
-				accessLog.logger.Warn(ctx, "Handle request done",
+				accessLog.Warn(ctx, "Handle request done",
 					"Method", c.Request().Method,
 					"Path", c.Path(),
 					"__source__", c.RealIP(),
@@ -45,8 +45,8 @@ func (w bodyLogWriter) Write(b []byte) (int, error) {
 	return w.ResponseWriter.Write(b)
 }
 
-func GinAccessLogInterceptor(opts ...option) gin.HandlerFunc {
-	newConfig(opts...)
+func GinAccessLogInterceptor(opts ...Option) gin.HandlerFunc {
+	NewConfig(opts...)
 	return func(c *gin.Context) {
 		var (
 			bodyBytes []byte
@@ -72,7 +72,7 @@ func GinAccessLogInterceptor(opts ...option) gin.HandlerFunc {
 			"method", c.Request.Method,
 		}
 
-		accessLog.logger.Info(c, "handle request begin", attrs...)
+		accessLog.Info(c, "handle request begin", attrs...)
 
 		start := time.Now().UTC()
 		c.Next()
@@ -87,9 +87,9 @@ func GinAccessLogInterceptor(opts ...option) gin.HandlerFunc {
 			"cost", end.Sub(start),
 		)
 		if c.Writer.Status() >= 500 {
-			accessLog.logger.Error(c, "handle request error", attrs...)
+			accessLog.Error(c, "handle request error", attrs...)
 		} else {
-			accessLog.logger.Info(c, "handle request done", attrs...)
+			accessLog.Info(c, "handle request done", attrs...)
 		}
 	}
 }

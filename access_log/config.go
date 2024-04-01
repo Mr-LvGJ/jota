@@ -4,13 +4,13 @@ import (
 	"github.com/Mr-LvGJ/jota/log"
 )
 
-var accessLog = &AccessLog{}
+var accessLog = &AccessLogger{}
 
-type option func(*AccessLog)
+type Option func(*AccessLogger)
 
-type AccessLog struct {
+type AccessLogger struct {
 	loggerConfig *log.Config
-	logger       *log.Logger
+	*log.Logger
 }
 
 var defaultLogConfig = &log.Config{
@@ -29,31 +29,32 @@ var defaultLogConfig = &log.Config{
 	Compress:   true,
 }
 
-func WithLogConfig(cfg *log.Config) option {
-	return func(c *AccessLog) {
+func WithLogConfig(cfg *log.Config) Option {
+	return func(c *AccessLogger) {
 		c.loggerConfig = cfg
 	}
 }
 
-func WithLogger(logger *log.Logger) option {
-	return func(c *AccessLog) {
-		c.logger = logger
+func WithLogger(logger *log.Logger) Option {
+	return func(c *AccessLogger) {
+		c.Logger = logger
 	}
 }
 
-func newConfig(opts ...option) {
+func NewConfig(opts ...Option) *AccessLogger {
 	for _, opt := range opts {
 		opt(accessLog)
 	}
 	if &accessLog.loggerConfig == nil {
 		accessLog.loggerConfig = defaultLogConfig
 	}
-	if accessLog.logger != nil {
-		return
+	if accessLog.Logger != nil {
+		return accessLog
 	}
 	logger, err := log.NewLogger(accessLog.loggerConfig)
 	if err != nil {
 		panic(err)
 	}
-	accessLog.logger = logger
+	accessLog.Logger = logger
+	return accessLog
 }
